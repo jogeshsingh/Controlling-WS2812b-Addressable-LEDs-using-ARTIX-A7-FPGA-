@@ -42,7 +42,6 @@ input [7:0] Red_in ,
 input [7:0] Green_in , 
 input [7:0] Blue_in , 
 output reg o_DOUT ,
-output o_cnt_en ,  
 output reg [2:0] p_STATE 
 
     );
@@ -88,7 +87,7 @@ always @(posedge i_clk)
              p_STATE <= RESET ;
              o_color = GREEN ;
              Reset_cnt <= 0;
-             address_led <= 0;   //31 //
+             address_led <= 0;   
              current_bit_index <= 3'b111;
             end 
          else 
@@ -153,7 +152,7 @@ always @(posedge i_clk)
                                  end
                             else   
                                      begin
-                                        ///if the current bit[7] == 0 , then move t next color strip //     
+                                      ///if the current bit[7] == 0 , then move the next color strip //     
                                              case (o_color)
                                              GREEN :  begin 
                                                       current_bit_index <= 3'b111 ;
