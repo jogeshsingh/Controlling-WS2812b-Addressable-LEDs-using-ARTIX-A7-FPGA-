@@ -1,9 +1,13 @@
+##THIS is the constraints file for #RTL_UART folder , however could be used for the #RTL folder too which is nothing just controlling led using MUX.
+
 ## Clock signal
 set_property -dict { PACKAGE_PIN E3    IOSTANDARD LVCMOS33 } [get_ports { i_clk }]; #IO_L12P_T1_MRCC_35 Sch=gclk[100]
 #create_clock -add -name sys_clk_pin -period 10.00 -waveform {0 5} [get_ports { CLK100MHZ }];
 
 ## Switches
 set_property -dict { PACKAGE_PIN A8    IOSTANDARD LVCMOS33 } [get_ports { rst_n }]; #IO_L12N_T1_MRCC_16 Sch=sw[0]
+    ###for using controlling the led's using mux , uncomment the next lines , and include the Files that are in #RTL files (not in RTL_UART) , and comment the o_RX_VALID ,  i_RX_SERIAL ,
+     ##and replace the comment all the header strips , instead use one and include the name according to the output mentioned in top module (#RTL folder)..
 #set_property -dict { PACKAGE_PIN C11   IOSTANDARD LVCMOS33 } [get_ports { i_MUX[0] }]; #IO_L13P_T2_MRCC_16 Sch=sw[1]
 #set_property -dict { PACKAGE_PIN C10   IOSTANDARD LVCMOS33 } [get_ports { i_MUX[1] }]; #IO_L13N_T2_MRCC_16 Sch=sw[2]
 
