@@ -1,4 +1,4 @@
-##THIS is the constraints file for #RTL_UART folder , however could be used for the #RTL folder too which is nothing just controlling led using MUX.
+##THIS is the constraint file for #RTL_UART folder , however could be used for the #RTL folder too which is nothing just controlling led using MUX.
 
 ## Clock signal
 set_property -dict { PACKAGE_PIN E3    IOSTANDARD LVCMOS33 } [get_ports { i_clk }]; #IO_L12P_T1_MRCC_35 Sch=gclk[100]
