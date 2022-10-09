@@ -33,7 +33,7 @@ output o_D1 ,  o_D2, o_D3 , o_D4
  wire [7:0] UART_RX ; 
  wire [1:0] m_sel ; 
  
- UART_RX UART_U1(
+ UART_RECEIVER UART_U1(
  .i_clk(i_clk) , ///Fpga clk ///
  .i_Rx_serial(i_RX_SERIAL) , ///data is serially loaded from PC through this ////
  .o_RX_DV(o_RX_VALID) , ////DATA_VALID , output showing data is successfully received //
